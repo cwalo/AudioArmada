@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		0499F5791E8EF9B30003611B /* AudioArmada.h in Headers */ = {isa = PBXBuildFile; fileRef = 0499F5771E8EF9B30003611B /* AudioArmada.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0499F5C11E8EFC140003611B /* WaveformZoomable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499F5C01E8EFC140003611B /* WaveformZoomable.swift */; };
+		04FBAEE81E930BD8003D123F /* AAMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEE71E930BD8003D123F /* AAMath.swift */; };
+		04FBAEEA1E930C7A003D123F /* CGPoint+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEE91E930C7A003D123F /* CGPoint+Operators.swift */; };
+		04FBAEEC1E930F91003D123F /* UIView+Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEEB1E930F91003D123F /* UIView+Normalize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0499F5741E8EF9B20003611B /* AudioArmada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudioArmada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0499F5771E8EF9B30003611B /* AudioArmada.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioArmada.h; sourceTree = "<group>"; };
 		0499F5781E8EF9B30003611B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0499F5C01E8EFC140003611B /* WaveformZoomable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveformZoomable.swift; path = Classes/WaveformZoomable.swift; sourceTree = "<group>"; };
+		04FBAEE71E930BD8003D123F /* AAMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAMath.swift; path = Utilities/AAMath.swift; sourceTree = "<group>"; };
+		04FBAEE91E930C7A003D123F /* CGPoint+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+Operators.swift"; path = "Extensions/CGPoint+Operators.swift"; sourceTree = "<group>"; };
+		04FBAEEB1E930F91003D123F /* UIView+Normalize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Normalize.swift"; path = "Extensions/UIView+Normalize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +38,7 @@
 		0499F56A1E8EF9B20003611B = {
 			isa = PBXGroup;
 			children = (
-				0499F5761E8EF9B30003611B /* AudioArmada */,
+				0499F5761E8EF9B30003611B /* Source */,
 				0499F5751E8EF9B20003611B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +51,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0499F5761E8EF9B30003611B /* AudioArmada */ = {
+		0499F5761E8EF9B30003611B /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				0499F5771E8EF9B30003611B /* AudioArmada.h */,
 				0499F5781E8EF9B30003611B /* Info.plist */,
+				0499F5C21E8EFC1A0003611B /* Classes */,
+				04FBAEE61E930BB1003D123F /* Utilities */,
+				04FBAEE31E930AFF003D123F /* Extensions */,
 			);
+			name = Source;
 			path = AudioArmada;
+			sourceTree = "<group>";
+		};
+		0499F5C21E8EFC1A0003611B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0499F5C01E8EFC140003611B /* WaveformZoomable.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		04FBAEE31E930AFF003D123F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04FBAEE91E930C7A003D123F /* CGPoint+Operators.swift */,
+				04FBAEEB1E930F91003D123F /* UIView+Normalize.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		04FBAEE61E930BB1003D123F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				04FBAEE71E930BD8003D123F /* AAMath.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +133,7 @@
 					0499F5731E8EF9B20003611B = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = TGW6PA8S8E;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0499F5C11E8EFC140003611B /* WaveformZoomable.swift in Sources */,
+				04FBAEE81E930BD8003D123F /* AAMath.swift in Sources */,
+				04FBAEEC1E930F91003D123F /* UIView+Normalize.swift in Sources */,
+				04FBAEEA1E930C7A003D123F /* CGPoint+Operators.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +282,7 @@
 		0499F57D1E8EF9B30003611B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = TGW6PA8S8E;
@@ -252,6 +295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.coreywalo.AudioArmada;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -259,6 +303,7 @@
 		0499F57E1E8EF9B30003611B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = TGW6PA8S8E;
@@ -294,6 +339,7 @@
 				0499F57E1E8EF9B30003611B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
