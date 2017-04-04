@@ -8,8 +8,9 @@ I'm starting this as a test bed for mobile audio and framework design. Hopefully
 * WaveformZoomable - draw zoomable waveforms from audio files with multiple styles (detailed or Soundcloud-like)
 
 
-### Running the examples
-The examples have Carthage dependencies, so be sure Carthage is installed, then run:
+## Examples
+The examples are contained in the `AudioArmadaExamples` project. They have Carthage dependencies, so be sure Carthage is installed, then run:
+
 `carthage update --platform iOS`
 
 
@@ -20,5 +21,3 @@ The examples have Carthage dependencies, so be sure Carthage is installed, then 
 Add the following to your project's `Cartfile`:
 
 `github "cwalo/AudioArmada" "master"`
-
-###TODOs
