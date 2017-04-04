@@ -41,13 +41,15 @@ public class WaveformZoomable : UIView {
         static var populated = false
     }
     
-    public convenience init(withFile: URL) {
+    public convenience init(withFile: URL, style: WaveformStyle = .detail) {
         self.init()
         
         openFile(withFile)
+        
+        self.style = style
     }
     
-    public func openFile(_ file: URL, style: WaveformStyle = .detail) {
+    public func openFile(_ file: URL) {
         let audioFile = try! AVAudioFile(forReading: file)
         
         // specify the format we WANT for the buffer
