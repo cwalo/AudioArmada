@@ -12,6 +12,7 @@ import AudioArmada
 
 class WaveformZoomableView: UIView {
     
+    let styleToggle = UISegmentedControl()
     let waveform = WaveformZoomable()
     let slider = UISlider()
     let sliderLabel = UILabel()
@@ -28,10 +29,14 @@ class WaveformZoomableView: UIView {
     
     func layoutView() {
         backgroundColor = .white
-                        
+        
+        addSubview(styleToggle)
         addSubview(waveform)
         addSubview(slider)
         addSubview(sliderLabel)
+        
+        Restraint(styleToggle, .bottom, .equal, waveform, .top, 1.0, -20.0).addToView(self)
+        Restraint(styleToggle, .centerX, .equal, self, .centerX).addToView(self)
         
         Restraint(waveform, .leading, .equal, self, .leading).addToView(self)
         Restraint(waveform, .trailing, .equal, self, .trailing).addToView(self)
