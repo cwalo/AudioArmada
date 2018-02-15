@@ -10,7 +10,8 @@ import UIKit
 
 class ExamplesListViewController: UITableViewController {
     
-    let examples: [UIViewController.Type] = [WaveformZoomableViewController.self]
+    let examples: [UIViewController.Type] = [WaveformZoomableViewController.self,
+                                             WaveformRollingViewController.self]
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -21,6 +21,8 @@
 		0499F5CF1E8F0DDC0003611B /* drumLoop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0499F5CE1E8F0DDC0003611B /* drumLoop.wav */; };
 		04FBAEDD1E93024E003D123F /* ExamplesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEDC1E93024E003D123F /* ExamplesListViewController.swift */; };
 		04FBAEE21E9305B6003D123F /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEE11E9305B6003D123F /* ExampleViewController.swift */; };
+		04FE9AD01E95FDAB00DEC4D4 /* WaveformRollingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE9ACF1E95FDAB00DEC4D4 /* WaveformRollingViewController.swift */; };
+		04FE9AD21E95FDBE00DEC4D4 /* WaveformRollingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE9AD11E95FDBE00DEC4D4 /* WaveformRollingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		0499F5CE1E8F0DDC0003611B /* drumLoop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = drumLoop.wav; path = "Audio Samples/drumLoop.wav"; sourceTree = "<group>"; };
 		04FBAEDC1E93024E003D123F /* ExamplesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExamplesListViewController.swift; path = Source/ExamplesListViewController.swift; sourceTree = "<group>"; };
 		04FBAEE11E9305B6003D123F /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleViewController.swift; path = Source/ExampleViewController.swift; sourceTree = "<group>"; };
+		04FE9ACF1E95FDAB00DEC4D4 /* WaveformRollingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveformRollingViewController.swift; path = Source/WaveformRollingViewController.swift; sourceTree = "<group>"; };
+		04FE9AD11E95FDBE00DEC4D4 /* WaveformRollingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveformRollingView.swift; path = Source/WaveformRollingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 				04FBAEDC1E93024E003D123F /* ExamplesListViewController.swift */,
 				04FBAEE11E9305B6003D123F /* ExampleViewController.swift */,
 				04FBAEDE1E9302CB003D123F /* WaveformZoomableExample */,
+				04FE9ACE1E95FD6A00DEC4D4 /* WaveformRollingExample */,
 			);
 			name = Examples;
 			sourceTree = "<group>";
@@ -179,6 +184,15 @@
 				0499F5971E8EF9D40003611B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04FE9ACE1E95FD6A00DEC4D4 /* WaveformRollingExample */ = {
+			isa = PBXGroup;
+			children = (
+				04FE9ACF1E95FDAB00DEC4D4 /* WaveformRollingViewController.swift */,
+				04FE9AD11E95FDBE00DEC4D4 /* WaveformRollingView.swift */,
+			);
+			name = WaveformRollingExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +311,9 @@
 			files = (
 				04FBAEE21E9305B6003D123F /* ExampleViewController.swift in Sources */,
 				0499F58E1E8EF9D40003611B /* WaveformZoomableViewController.swift in Sources */,
+				04FE9AD21E95FDBE00DEC4D4 /* WaveformRollingView.swift in Sources */,
 				0499F58C1E8EF9D40003611B /* AppDelegate.swift in Sources */,
+				04FE9AD01E95FDAB00DEC4D4 /* WaveformRollingViewController.swift in Sources */,
 				04FBAEDD1E93024E003D123F /* ExamplesListViewController.swift in Sources */,
 				0499F5C41E8F02DF0003611B /* WaveformZoomableView.swift in Sources */,
 			);

@@ -12,6 +12,7 @@
 		04FBAEE81E930BD8003D123F /* AAMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEE71E930BD8003D123F /* AAMath.swift */; };
 		04FBAEEA1E930C7A003D123F /* CGPoint+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEE91E930C7A003D123F /* CGPoint+Operators.swift */; };
 		04FBAEEC1E930F91003D123F /* UIView+Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEEB1E930F91003D123F /* UIView+Normalize.swift */; };
+		04FE9ACD1E95FA8300DEC4D4 /* WaveformRolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE9ACC1E95FA8300DEC4D4 /* WaveformRolling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		04FBAEE71E930BD8003D123F /* AAMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AAMath.swift; path = Utilities/AAMath.swift; sourceTree = "<group>"; };
 		04FBAEE91E930C7A003D123F /* CGPoint+Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGPoint+Operators.swift"; path = "Extensions/CGPoint+Operators.swift"; sourceTree = "<group>"; };
 		04FBAEEB1E930F91003D123F /* UIView+Normalize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Normalize.swift"; path = "Extensions/UIView+Normalize.swift"; sourceTree = "<group>"; };
+		04FE9ACC1E95FA8300DEC4D4 /* WaveformRolling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaveformRolling.swift; path = Classes/WaveformRolling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				0499F5C01E8EFC140003611B /* WaveformZoomable.swift */,
+				04FE9ACC1E95FA8300DEC4D4 /* WaveformRolling.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				0499F5C11E8EFC140003611B /* WaveformZoomable.swift in Sources */,
 				04FBAEE81E930BD8003D123F /* AAMath.swift in Sources */,
+				04FE9ACD1E95FA8300DEC4D4 /* WaveformRolling.swift in Sources */,
 				04FBAEEC1E930F91003D123F /* UIView+Normalize.swift in Sources */,
 				04FBAEEA1E930C7A003D123F /* CGPoint+Operators.swift in Sources */,
 			);

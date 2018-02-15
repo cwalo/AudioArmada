@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-protocol ExampleViewController {
+protocol ExampleViewController : class {
     static var displayName: String { get }
 }
