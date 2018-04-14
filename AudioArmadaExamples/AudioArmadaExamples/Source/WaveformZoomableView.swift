@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Restraint
 import AudioArmada
 
 class WaveformZoomableView: UIView {
@@ -35,20 +34,24 @@ class WaveformZoomableView: UIView {
         addSubview(slider)
         addSubview(sliderLabel)
         
-        Restraint(styleToggle, .bottom, .equal, waveform, .top, 1.0, -20.0).addToView(self)
-        Restraint(styleToggle, .centerX, .equal, self, .centerX).addToView(self)
+        styleToggle.translatesAutoresizingMaskIntoConstraints = false
+        waveform.translatesAutoresizingMaskIntoConstraints = false
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        sliderLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        Restraint(waveform, .leading, .equal, self, .leading).addToView(self)
-        Restraint(waveform, .trailing, .equal, self, .trailing).addToView(self)
-        Restraint(waveform, .height, .equal, 200.0).addToView(self)
-        Restraint(waveform, .centerY, .equal, self, .centerY).addToView(self)
+        styleToggle.bottomAnchor.constraint(equalTo: waveform.topAnchor, constant: -20.0).isActive = true
+        styleToggle.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
-        Restraint(slider, .width, .equal, 100.0).addToView(self)
-        Restraint(slider, .centerX, .equal, self, .centerX).addToView(self)
-        Restraint(slider, .top, .equal, waveform, .bottom, 1.0, 20.0).addToView(self)
+        waveform.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        waveform.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        waveform.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        waveform.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
         
-        Restraint(sliderLabel, .left, .equal, slider, .right, 1.0, 10.0).addToView(self)
-        Restraint(sliderLabel, .centerY, .equal, slider, .centerY).addToView(self)
+        slider.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        slider.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        slider.topAnchor.constraint(equalTo: waveform.bottomAnchor, constant: 20.0).isActive = true
+        
+        sliderLabel.leadingAnchor.constraint(equalTo: slider.trailingAnchor, constant: 10.0).isActive = true
+        sliderLabel.centerYAnchor.constraint(equalTo: slider.centerYAnchor).isActive = true
     }
-
 }

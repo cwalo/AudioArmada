@@ -16,7 +16,6 @@
 		0499F5BB1E8EFBAB0003611B /* AudioArmada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0499F5B21E8EFB5A0003611B /* AudioArmada.framework */; };
 		0499F5BC1E8EFBAB0003611B /* AudioArmada.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0499F5B21E8EFB5A0003611B /* AudioArmada.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0499F5C41E8F02DF0003611B /* WaveformZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499F5C31E8F02DF0003611B /* WaveformZoomableView.swift */; };
-		0499F5C61E8F071F0003611B /* Restraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0499F5C51E8F071F0003611B /* Restraint.framework */; };
 		0499F5CD1E8F0C890003611B /* Divergence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0499F5CC1E8F0C890003611B /* Divergence.wav */; };
 		0499F5CF1E8F0DDC0003611B /* drumLoop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0499F5CE1E8F0DDC0003611B /* drumLoop.wav */; };
 		04FBAEDD1E93024E003D123F /* ExamplesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBAEDC1E93024E003D123F /* ExamplesListViewController.swift */; };
@@ -90,7 +89,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0499F5BB1E8EFBAB0003611B /* AudioArmada.framework in Frameworks */,
-				0499F5C61E8F071F0003611B /* Restraint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +203,6 @@
 				0499F5841E8EF9D40003611B /* Sources */,
 				0499F5851E8EF9D40003611B /* Frameworks */,
 				0499F5861E8EF9D40003611B /* Resources */,
-				0499F5C71E8F07280003611B /* Carthage */,
 				0499F5BF1E8EFBAB0003611B /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -285,24 +282,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0499F5C71E8F07280003611B /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Restraint.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0499F5841E8EF9D40003611B /* Sources */ = {

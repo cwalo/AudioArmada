@@ -6,9 +6,7 @@
 //  Copyright © 2017 Corey Walo. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import Restraint
 import AudioArmada
 
 class WaveformRollingView : UIView {
@@ -53,39 +51,50 @@ class WaveformRollingView : UIView {
         addSubview(playButton)
         addSubview(stopButton)
         
-        Restraint(styleToggle, .bottom, .equal, waveform, .top, 1.0, -20.0).addToView(self)
-        Restraint(styleToggle, .centerX, .equal, self, .centerX).addToView(self)
+        styleToggle.translatesAutoresizingMaskIntoConstraints = false
+        waveform.translatesAutoresizingMaskIntoConstraints = false
+        sliderTitle.translatesAutoresizingMaskIntoConstraints = false
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        sliderLabel.translatesAutoresizingMaskIntoConstraints = false
+        historySliderTitle.translatesAutoresizingMaskIntoConstraints = false
+        historySlider.translatesAutoresizingMaskIntoConstraints = false
+        historySliderLabel.translatesAutoresizingMaskIntoConstraints = false
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        stopButton.translatesAutoresizingMaskIntoConstraints = false
         
-        Restraint(waveform, .leading, .equal, self, .leading).addToView(self)
-        Restraint(waveform, .trailing, .equal, self, .trailing).addToView(self)
-        Restraint(waveform, .height, .equal, 200.0).addToView(self)
-        Restraint(waveform, .centerY, .equal, self, .centerY).addToView(self)
+        styleToggle.bottomAnchor.constraint(equalTo: waveform.topAnchor, constant: -20.0).isActive = true
+        styleToggle.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
-        Restraint(sliderTitle, .right, .equal, slider, .left, 1.0, -10.0).addToView(self)
-        Restraint(sliderTitle, .centerY, .equal, slider, .centerY).addToView(self)
+        waveform.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        waveform.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        waveform.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        waveform.heightAnchor.constraint(equalToConstant: 200.0).isActive = true
         
-        Restraint(slider, .width, .equal, 100.0).addToView(self)
-        Restraint(slider, .centerX, .equal, self, .centerX).addToView(self)
-        Restraint(slider, .top, .equal, waveform, .bottom, 1.0, 20.0).addToView(self)
+        sliderTitle.trailingAnchor.constraint(equalTo: slider.leadingAnchor, constant: -10.0).isActive = true
+        sliderTitle.centerYAnchor.constraint(equalTo: slider.centerYAnchor).isActive = true
         
-        Restraint(sliderLabel, .left, .equal, slider, .right, 1.0, 10.0).addToView(self)
-        Restraint(sliderLabel, .centerY, .equal, slider, .centerY).addToView(self)
+        slider.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        slider.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        slider.topAnchor.constraint(equalTo: waveform.bottomAnchor, constant: 20.0).isActive = true
         
-        Restraint(historySliderTitle, .right, .equal, historySlider, .left, 1.0, -10.0).addToView(self)
-        Restraint(historySliderTitle, .centerY, .equal, historySlider, .centerY).addToView(self)
+        sliderLabel.leadingAnchor.constraint(equalTo: slider.trailingAnchor, constant: 10.0).isActive = true
+        sliderLabel.centerYAnchor.constraint(equalTo: slider.centerYAnchor).isActive = true
         
-        Restraint(historySlider, .width, .equal, 100.0).addToView(self)
-        Restraint(historySlider, .centerX, .equal, self, .centerX).addToView(self)
-        Restraint(historySlider, .top, .equal, slider, .bottom, 1.0, 20.0).addToView(self)
+        historySliderTitle.trailingAnchor.constraint(equalTo: historySlider.leadingAnchor, constant: -10.0).isActive = true
+        historySliderTitle.centerYAnchor.constraint(equalTo: historySlider.centerYAnchor).isActive = true
         
-        Restraint(historySliderLabel, .left, .equal, historySlider, .right, 1.0, 10.0).addToView(self)
-        Restraint(historySliderLabel, .centerY, .equal, historySlider, .centerY).addToView(self)
+        historySlider.widthAnchor.constraint(equalToConstant: 100.0).isActive = true
+        historySlider.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        historySlider.topAnchor.constraint(equalTo: slider.bottomAnchor, constant: 20.0).isActive = true
         
-        Restraint(playButton, .top, .equal, historySlider, .bottom, 1.0, 15.0).addToView(self)
-        Restraint(playButton, .centerX, .equal, self, .centerX).addToView(self)
+        historySliderLabel.leadingAnchor.constraint(equalTo: historySlider.trailingAnchor, constant: 10.0).isActive = true
+        historySliderLabel.centerYAnchor.constraint(equalTo: historySlider.centerYAnchor).isActive = true
+
+        playButton.topAnchor.constraint(equalTo: historySlider.bottomAnchor, constant: 15.0).isActive = true
+        playButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
-        Restraint(stopButton, .top, .equal, playButton, .bottom, 1.0, 15.0).addToView(self)
-        Restraint(stopButton, .centerX, .equal, self, .centerX).addToView(self)
+        stopButton.topAnchor.constraint(equalTo: playButton.bottomAnchor, constant: 15.0).isActive = true
+        stopButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 
     }
 }
